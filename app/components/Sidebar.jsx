@@ -1,16 +1,40 @@
 "use client"
 import React, { useState } from 'react'
 
-const Sidebar = () => {
+const Sidebar = ({handle,setHandle}) => {
 
-
+  const [toggle,setToggle] = useState(true)
   
+
   return (
-    <div  className={`min-h-screen sidebar sticky top-0 bottom-0  w-72 `}>
+    <div  className={`min-h-screen sidebar transition-all fixed lg:sticky top-0 bottom-0 z-20 ${handle  ? 'left-0' : '-left-96'} lg:left-0  w-72 `}>
+  
       <div className='text-white w-full h-20 flex items-center justify-center gap-2'>
         <h3 className='text-lg'>Weframetech</h3>
-        <i  className="ri-menu-line text-blue-500 text-xl"></i>
+        <i onClick={()=>{setHandle(!handle)}}   className="ri-menu-line lg:hidden text-blue-500 text-xl"></i>
       </div>
+      <div className=' rounded-full w-[85%] ml-5 mb-2 flex lg:hidden px-2 bg-blue-900 items-center '>
+                <i className="ri-search-line text-xl text-blue-300"></i>
+                <input className='bg-blue-900 w-[80%] rounded-full outline-none border-none text-white text-xs  px-3 py-3' type="text" placeholder='Search here' />
+            </div>
+            <div className='lg:hidden flex w-full items-center justify-center my-5 gap-8 text-lg text-white'>
+                <div className='relative'>
+                    <div className='w-5 h-5 rounded-full text-xs -right-1 -top-1 absolute flex items-center justify-center bg-blue-500'>12</div>
+                    <i className="ri-notification-fill text-2xl text-blue-300"></i>
+                </div>
+                <div className='relative'>
+                <div className='w-5 h-5 rounded-full text-xs -right-1 -top-1 absolute flex items-center justify-center bg-blue-500'>5</div>
+                    <i className="ri-movie-fill  text-2xl text-gray-500"></i>
+                </div>
+                <div className='relative'>
+                <div className='w-5 h-5 rounded-full text-xs -right-1 -top-1 absolute flex items-center justify-center bg-blue-500'>2</div>
+                    <i className="ri-task-fill text-2xl text-blue-300"></i>
+                    </div>
+                <div className='relative'>
+                <div className='w-5 h-5 rounded-full text-xs -right-1 -top-1 absolute flex items-center justify-center bg-red-500'>!</div>
+                    <i className="ri-inbox-fill text-2xl text-blue-300"></i>
+                    </div>
+            </div>
       <div className='mainMenu w-full flex items-center justify-center'>
         <div className='w-[80%]'>
             <div className='w-full'>

@@ -9,8 +9,17 @@
 
 .main{
   background-color: rgb(1, 2, 24);
+  
 }
 
-.clip{
+.clip{overflow-x: auto;
+  white-space: nowrap;
   clip-path: circle(50.0% at 63% 50%);
+  
+}
+
+.scrollable{
+  overflow-x: auto;
+    white-space: nowrap;
+    width: 120vw;
 }

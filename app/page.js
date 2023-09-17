@@ -5,27 +5,28 @@ import Navbar from './components/Navbar'
 const Home = () => {
 
   return (
-    <div className='flex min-h-screen '>
-      <div>
+    <div className='flex min-h-screen z-10  '>
+      <div >
       <Sidebar/>
 
       </div>
-      <div className='w-full main '>
+      <div  className=' main overflow-hidden lg:w-[82vw] w-full  '>
       <Navbar/>
       <div className='w-full min-h-screen flex flex-col '>
 
    
-      <div className='up flex items-center justify-center'>
-        <div className='w-[95%] rounded-lg h-48 sidebar mt-5 flex items-center justify-around'>
-          <div className='  h-[80%] flex items-start justify-center'>
+      <div className='up w-full  flex items-center justify-center'>
+        <div className='w-[98%] rounded-lg min-h-56 sidebar mt-5 px-6  py-12 flex items-center justify-start lg:justify-around'>
+         
+          <div className='h-[80%] items-start justify-center flex flex-col '>
+            <div className='flex gap-2 items-center justify-center'>
             <div className='w-7 h-7 rounded-full bg-gray-200 flex items-center justify-center'>
             <i className="ri-arrow-left-line"></i>
             </div>
-          </div>
-          <div className='h-[80%] items-start justify-center flex flex-col '>
-            <h1 className='text-2xl font-bold text-white'>School November Tasks</h1>
+            <h1 className='text-2xl font-bold  text-white'>School November Tasks</h1>
+            </div>
             <p className='text-xs my-2 text-gray-500'>Created by Instructor Day on November 31, 2022</p>
-            <div className='flex items-center justify-center gap-4'>
+            <div className='flex items-center flex-wrap justify-start gap-4'>
               <div className='flex'>
                 <div className='w-6 h-6 clip bg-gray-200'></div>
                 <div className='w-6 h-6 clip bg-gray-200'></div>
@@ -38,8 +39,17 @@ const Home = () => {
               <button className='py-2 px-4 bg-blue-400 text-white text-xs font-bold rounded-xl'>Edit</button>
               <button className='py-2 px-3 border border-blue-300 text-white text-xs font-bold rounded-xl'><i className="ri-message-2-fill mr-2 text-sm"></i>45 Comments</button>
             </div>
+            <div className='flex items-center mt-4 lg:hidden justify-center gap-2'>
+              <p className='text-base text-white'>Total Progress 60%</p>
+              <div className='w-56 h-3 rounded-full  bg-gray-700'>
+                <div className='w-[60%] h-full bg-purple-600 rounded-full'></div>
+              </div>
+              <div>
+                
+              </div>
+            </div>
           </div>
-          <div className='h-[80%] flex flex-col items-end justify-center'>
+          <div className='h-[80%] hidden lg:flex flex-col items-end justify-center'>
             <div className='flex gap-3 justify-end items-center'>
               <div className='flex flex-col items-end justify-center'>
                 <h3 className='text-base font-semibold text-white'>Centered Martial Arts</h3>
@@ -60,9 +70,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='down  mt-4 flex items-start justify-center'>
-        <div className='w-[95%]  flex items-start justify-between'>
-        <div className='flex w-[24%]  flex-col items-center justify-start'>
+      <div className='down overflow-scroll  mt-4 p-4 flex items-start justify-start'>
+        <div className='    gap-5  flex item-start justify-around'>
+        <div className='flex w-72  flex-col items-center justify-start'>
           <div className='p-3 w-full flex items-center justify-between'>
             <h3 className='text-white font-bold'>To-Do List(24)</h3>
             <div className='w-8 h-8 rounded-xl flex items-center justify-center bg-purple-600'><i className="ri-add-fill font-bold text-white"></i></div>
@@ -127,7 +137,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='flex w-[24%]  flex-col items-center justify-start'>
+        <div className='flex w-72  flex-col items-center justify-start'>
           <div className='p-3 w-full flex items-center justify-between'>
             <h3 className='text-white font-bold'>In Progress(2)</h3>
             <div className='w-8 h-8 rounded-xl flex items-center justify-center bg-blue-900'><i className="ri-add-fill font-bold text-white"></i></div>
@@ -152,7 +162,7 @@ const Home = () => {
               <p className='text-xs text-gray-300'>Due in 4 days</p>
               </div>
             </div>
-            <div className='w-full mt-3  h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
+            <div className='w-full mt-6 rotate-12 h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
               <div className='flex w-full items-center mt-2 justify-between'>
                 <h3 className='text-xs font-bold text-red-500'>BUGS FIXING</h3>
                 <i className="ri-list-check text-white"></i>
@@ -174,7 +184,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='flex w-[24%]  flex-col items-center justify-start'>
+        <div className='flex w-72  flex-col items-center justify-start'>
           <div className='p-3 w-full flex items-center justify-between'>
             <h3 className='text-white font-bold'>Done(3)</h3>
             <div className='w-8 h-8 rounded-xl flex items-center justify-center bg-blue-900'><i className="ri-add-fill font-bold text-white"></i></div>
@@ -242,7 +252,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='flex w-[24%]  flex-col items-center justify-start'>
+        <div className='flex w-72  flex-col items-center justify-start'>
           <div className='p-3 w-full flex items-center justify-between'>
             <h3 className='font-bold text-white'>Revised(0)</h3>
             <div className='w-8 h-8 rounded-xl flex items-center justify-center bg-blue-900'><i className="ri-add-fill font-bold text-white"></i></div>
@@ -250,6 +260,74 @@ const Home = () => {
           <div className='w-full'>
             <div className='w-full mt-3 h-20 rounded-xl flex items-center justify-center bg-blue-800'>
               <div className='w-[80%] h-[60%] rounded-xl sidebar outline-white outline-dotted flex items-center justify-center'><p className='text-sm font-semibold text-blue-800'>Move card here</p></div>
+            </div>
+          </div>
+        </div>
+        <div className='flex w-72  flex-col items-center justify-start'>
+          <div className='p-3 w-full flex items-center justify-between'>
+            <h3 className='text-white font-bold'>Done(3)</h3>
+            <div className='w-8 h-8 rounded-xl flex items-center justify-center bg-blue-900'><i className="ri-add-fill font-bold text-white"></i></div>
+          </div>
+          <div>
+          <div className='w-full mt-3  h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
+              <div className='flex w-full items-center mt-2 justify-between'>
+                <h3 className='text-xs font-bold text-red-500'>BUGS FIXING</h3>
+                <i className="ri-list-check text-white"></i>
+
+              </div>
+              <p className='text-sm font-semibold mt-2 text-white'>Action Button needed for Google Maps visits.</p>
+              <div className='w-60 h-2 rounded-full mt-3  bg-gray-800'>
+                <div className='w-full h-full bg-red-500 rounded-full'></div>
+              </div>
+              <div className='w-full flex items-center mt-5 justify-between'>
+              <div className='flex'>
+                <div className='w-6 h-6 rounded-full bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+              </div> 
+              <p className='text-xs text-gray-300'>Delay in 4 days</p>
+              </div>
+            </div>
+            <div className='w-full mt-3  h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
+              <div className='flex w-full items-center mt-2 justify-between'>
+                <h3 className='text-xs font-bold text-green-500'>Database</h3>
+                <i className="ri-list-check text-white"></i>
+
+              </div>
+              <p className='text-sm font-semibold mt-2 text-white'>Update new instructor photos.</p>
+              <div className='w-60 h-2 rounded-full mt-3  bg-gray-800'>
+                <div className='w-full h-full bg-green-600 rounded-full'></div>
+              </div>
+              <div className='w-full flex items-center mt-5 justify-between'>
+              <div className='flex'>
+                <div className='w-6 h-6 rounded-full bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+              </div> 
+              <p className='text-xs text-gray-300'>Due in 4 days</p>
+              </div>
+            </div>
+            <div className='w-full mt-3  h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
+              <div className='flex w-full items-center mt-2 justify-between'>
+                <h3 className='text-xs font-bold text-pink-500'>Instructor Meeting</h3>
+                <i className="ri-list-check text-white"></i>
+
+              </div>
+              <p className='text-sm font-semibold mt-2 text-white'>Review/correct yellow belt techniques.</p>
+              <div className='w-60 h-2 rounded-full mt-3  bg-gray-800'>
+                <div className='w-full h-full bg-pink-500 rounded-full'></div>
+              </div>
+              <div className='w-full flex items-center mt-5 justify-between'>
+              <div className='flex'>
+                <div className='w-6 h-6 rounded-full bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+              </div> 
+              <p className='text-xs text-gray-300'>Due in 4 days</p>
+              </div>
             </div>
           </div>
         </div>

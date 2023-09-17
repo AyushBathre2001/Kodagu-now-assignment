@@ -1,113 +1,269 @@
-import Image from 'next/image'
+import React from 'react'
+import Sidebar from './components/Sidebar'
+import Navbar from './components/Navbar'
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className='flex min-h-screen '>
+      <div>
+      <Sidebar/>
+
+      </div>
+      <div className='w-full main '>
+      <Navbar/>
+      <div className='w-full min-h-screen flex flex-col '>
+
+   
+      <div className='up flex items-center justify-center'>
+        <div className='w-[95%] rounded-lg h-48 sidebar mt-5 flex items-center justify-around'>
+          <div className='  h-[80%] flex items-start justify-center'>
+            <div className='w-7 h-7 rounded-full bg-gray-200 flex items-center justify-center'>
+            <i class="ri-arrow-left-line"></i>
+            </div>
+          </div>
+          <div className='h-[80%] items-start justify-center flex flex-col '>
+            <h1 className='text-2xl font-bold text-white'>School November Tasks</h1>
+            <p className='text-xs my-2 text-gray-500'>Created by Instructor Day on November 31, 2022</p>
+            <div className='flex items-center justify-center gap-4'>
+              <div className='flex'>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 text-xs text-white font-bold flex items-center justify-center  rounded-xl bg-pink-500'>5+</div>
+              </div>
+              <button className='py-2 px-3 bg-purple-600 text-xs rounded-xl text-white font-bold'><i class="ri-user-add-fill mr-1 text-sm"></i> Invite People</button>
+              <button className='py-2 px-4 border border-blue-300 font-bold text-xs rounded-xl text-white'>Private</button>
+              <button className='py-2 px-4 bg-blue-400 text-white text-xs font-bold rounded-xl'>Edit</button>
+              <button className='py-2 px-3 border border-blue-300 text-white text-xs font-bold rounded-xl'><i class="ri-message-2-fill mr-2 text-sm"></i>45 Comments</button>
+            </div>
+          </div>
+          <div className='h-[80%] flex flex-col items-end justify-center'>
+            <div className='flex gap-3 justify-end items-center'>
+              <div className='flex flex-col items-end justify-center'>
+                <h3 className='text-base font-semibold text-white'>Centered Martial Arts</h3>
+                <p className=' text-xs  text-gray-400'>Sunnyvale, Ca</p>
+              </div>
+              <div className='w-12 h-12 rounded-xl bg-gray-100'></div>
+              <i class="ri-list-check text-white"></i>
+            </div>
+            <div className='flex items-center mt-3 justify-center gap-2'>
+              <p className='text-base text-white'>Total Progress 60%</p>
+              <div className='w-56 h-3 rounded-full  bg-gray-700'>
+                <div className='w-[60%] h-full bg-purple-600 rounded-full'></div>
+              </div>
+              <div>
+                
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div className='down  mt-4 flex items-start justify-center'>
+        <div className='w-[95%]  flex items-start justify-between'>
+        <div className='flex w-[24%]  flex-col items-center justify-start'>
+          <div className='p-3 w-full flex items-center justify-between'>
+            <h3 className='text-white font-bold'>To-Do List(24)</h3>
+            <div className='w-8 h-8 rounded-xl flex items-center justify-center bg-purple-600'><i class="ri-add-fill font-bold text-white"></i></div>
+          </div>
+          <div className='w-full'>
+            <div className='w-full mt-3  h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
+              <div className='flex w-full items-center mt-2 justify-between'>
+                <h3 className='text-xs font-bold text-orange-300'>Important</h3>
+                <i class="ri-list-check text-white"></i>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+              </div>
+              <p className='text-sm font-semibold mt-2 text-white'>Create sign up sheet for holiday student/parent conferences.</p>
+              <div className='w-60 h-2 rounded-full mt-3  bg-gray-800'>
+                <div className='w-[30%] h-full bg-orange-600 rounded-full'></div>
+              </div>
+              <div className='w-full flex items-center mt-5 justify-between'>
+              <div className='flex'>
+                <div className='w-6 h-6 rounded-full bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+              </div> 
+              <p className='text-xs text-gray-300'>Delay in 4 days</p>
+              </div>
+            </div>
+            <div className='w-full mt-3  h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
+              <div className='flex w-full items-center mt-2 justify-between'>
+                <h3 className='text-xs font-bold text-orange-300'>Important</h3>
+                <i class="ri-list-check text-white"></i>
+
+              </div>
+              <p className='text-sm font-semibold mt-2 text-white'>Create sign up sheet for holiday student/parent conferences.</p>
+              <div className='w-60 h-2 rounded-full mt-3  bg-gray-800'>
+                <div className='w-[30%] h-full bg-orange-600 rounded-full'></div>
+              </div>
+              <div className='w-full flex items-center mt-5 justify-between'>
+              <div className='flex'>
+                <div className='w-6 h-6 rounded-full bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+              </div> 
+              <p className='text-xs text-gray-300'>Delay in 4 days</p>
+              </div>
+            </div>
+            <div className='w-full mt-3  h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
+              <div className='flex w-full items-center mt-2 justify-between'>
+                <h3 className='text-xs font-bold text-orange-300'>Important</h3>
+                <i class="ri-list-check text-white"></i>
+
+              </div>
+              <p className='text-sm font-semibold mt-2 text-white'>Create sign up sheet for holiday student/parent conferences.</p>
+              <div className='w-60 h-2 rounded-full mt-3  bg-gray-800'>
+                <div className='w-[30%] h-full bg-orange-600 rounded-full'></div>
+              </div>
+              <div className='w-full flex items-center mt-5 justify-between'>
+              <div className='flex'>
+                <div className='w-6 h-6 rounded-full bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+              </div> 
+              <p className='text-xs text-gray-300'>Delay in 4 days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='flex w-[24%]  flex-col items-center justify-start'>
+          <div className='p-3 w-full flex items-center justify-between'>
+            <h3 className='text-white font-bold'>In Progress(2)</h3>
+            <div className='w-8 h-8 rounded-xl flex items-center justify-center bg-blue-900'><i class="ri-add-fill font-bold text-white"></i></div>
+          </div>
+          <div>
+          <div className='w-full mt-3  h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
+              <div className='flex w-full items-center mt-2 justify-between'>
+                <h3 className='text-xs font-bold text-orange-300'>Important</h3>
+                <i class="ri-list-check text-white"></i>
+
+              </div>
+              <p className='text-sm font-semibold mt-2 text-white'>Create sign up sheet for holiday student/parent conferences.</p>
+              <div className='w-60 h-2 rounded-full mt-3  bg-gray-800'>
+                <div className='w-[30%] h-full bg-orange-600 rounded-full'></div>
+              </div>
+              <div className='w-full flex items-center mt-5 justify-between'>
+              <div className='flex'>
+                <div className='w-6 h-6 rounded-full bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+              </div> 
+              <p className='text-xs text-gray-300'>Delay in 4 days</p>
+              </div>
+            </div>
+            <div className='w-full mt-3  h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
+              <div className='flex w-full items-center mt-2 justify-between'>
+                <h3 className='text-xs font-bold text-orange-300'>Important</h3>
+                <i class="ri-list-check text-white"></i>
+
+              </div>
+              <p className='text-sm font-semibold mt-2 text-white'>Create sign up sheet for holiday student/parent conferences.</p>
+              <div className='w-60 h-2 rounded-full mt-3  bg-gray-800'>
+                <div className='w-[30%] h-full bg-orange-600 rounded-full'></div>
+              </div>
+              <div className='w-full flex items-center mt-5 justify-between'>
+              <div className='flex'>
+                <div className='w-6 h-6 rounded-full bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+              </div> 
+              <p className='text-xs text-gray-300'>Delay in 4 days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='flex w-[24%]  flex-col items-center justify-start'>
+          <div className='p-3 w-full flex items-center justify-between'>
+            <h3 className='text-white font-bold'>Done(3)</h3>
+            <div className='w-8 h-8 rounded-xl flex items-center justify-center bg-blue-900'><i class="ri-add-fill font-bold text-white"></i></div>
+          </div>
+          <div>
+          <div className='w-full mt-3  h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
+              <div className='flex w-full items-center mt-2 justify-between'>
+                <h3 className='text-xs font-bold text-orange-300'>Important</h3>
+                <i class="ri-list-check text-white"></i>
+
+              </div>
+              <p className='text-sm font-semibold mt-2 text-white'>Create sign up sheet for holiday student/parent conferences.</p>
+              <div className='w-60 h-2 rounded-full mt-3  bg-gray-800'>
+                <div className='w-[30%] h-full bg-orange-600 rounded-full'></div>
+              </div>
+              <div className='w-full flex items-center mt-5 justify-between'>
+              <div className='flex'>
+                <div className='w-6 h-6 rounded-full bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+              </div> 
+              <p className='text-xs text-gray-300'>Delay in 4 days</p>
+              </div>
+            </div>
+            <div className='w-full mt-3  h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
+              <div className='flex w-full items-center mt-2 justify-between'>
+                <h3 className='text-xs font-bold text-orange-300'>Important</h3>
+                <i class="ri-list-check text-white"></i>
+
+              </div>
+              <p className='text-sm font-semibold mt-2 text-white'>Create sign up sheet for holiday student/parent conferences.</p>
+              <div className='w-60 h-2 rounded-full mt-3  bg-gray-800'>
+                <div className='w-[30%] h-full bg-orange-600 rounded-full'></div>
+              </div>
+              <div className='w-full flex items-center mt-5 justify-between'>
+              <div className='flex'>
+                <div className='w-6 h-6 rounded-full bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+              </div> 
+              <p className='text-xs text-gray-300'>Delay in 4 days</p>
+              </div>
+            </div>
+            <div className='w-full mt-3  h-48 flex flex-col items-start justify-start  p-4 rounded-xl bg-blue-800'>
+              <div className='flex w-full items-center mt-2 justify-between'>
+                <h3 className='text-xs font-bold text-orange-300'>Important</h3>
+                <i class="ri-list-check text-white"></i>
+
+              </div>
+              <p className='text-sm font-semibold mt-2 text-white'>Create sign up sheet for holiday student/parent conferences.</p>
+              <div className='w-60 h-2 rounded-full mt-3  bg-gray-800'>
+                <div className='w-[30%] h-full bg-orange-600 rounded-full'></div>
+              </div>
+              <div className='w-full flex items-center mt-5 justify-between'>
+              <div className='flex'>
+                <div className='w-6 h-6 rounded-full bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+                <div className='w-6 h-6 clip bg-gray-200'></div>
+              </div> 
+              <p className='text-xs text-gray-300'>Delay in 4 days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='flex w-[24%]  flex-col items-center justify-start'>
+          <div className='p-3 w-full flex items-center justify-between'>
+            <h3 className='font-bold text-white'>Revised(0)</h3>
+            <div className='w-8 h-8 rounded-xl flex items-center justify-center bg-blue-900'><i class="ri-add-fill font-bold text-white"></i></div>
+          </div>
+          <div className='w-full'>
+            <div className='w-full mt-3 h-20 rounded-xl flex items-center justify-center bg-blue-800'>
+              <div className='w-[80%] h-[60%] rounded-xl sidebar outline-white outline-dotted flex items-center justify-center'><p className='text-sm font-semibold text-blue-800'>Move card here</p></div>
+            </div>
+          </div>
+        </div>
+        </div>
+     
+      </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
       </div>
-    </main>
+    </div>
   )
 }
+
+export default Home
